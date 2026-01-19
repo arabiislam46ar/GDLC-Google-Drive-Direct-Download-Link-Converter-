@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+  padding: 30px;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  flex: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+  color: #4285f4;
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+header p {
+  color: #5f6368;
+  margin: 15px 0 0;
+  font-size: 20px;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 35px;
+  gap: 15px;
+}
+
+#driveLink {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: border-color 0.3s;
+}
+
+#driveLink:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
+}
+
+#convertBtn {
+  padding: 16px 28px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+#convertBtn:hover {
+  background-color: #3367d6;
+}
+
+#convertBtn:disabled {
+  background-color: #a8c7fa;
+  cursor: not-allowed;
+}
+
+.loading-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4285f4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 25px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-section p {
+  font-size: 20px;
+  color: #5f6368;
+}
+
+.result-section, .error-section {
+  margin-top: 35px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.result-section h3 {
+  margin-bottom: 20px;
+  color: #34a853;
+  font-size: 24px;
+}
+
+.result-box {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+#directLink {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  background-color: #f9f9f9;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#copyBtn {
+  padding: 14px 24px;
+  background-color: #34a853;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#copyBtn:hover {
+  background-color: #2e8b47;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 14px 24px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+#downloadLink {
+  background-color: #fbbc05;
+  color: white;
+}
+
+#downloadLink:hover {
+  background-color: #e6a800;
+}
+
+#newConversionBtn {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#newConversionBtn:hover {
+  background-color: #e8eaed;
+}
+
+.error-section {
+  color: #d93025;
+  padding: 20px;
+  background-color: #fce8e6;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 35px;
+  color: #5f6368;
+  font-size: 16px;
+}
+
+.instructions {
+  margin-top: 35px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4285f4;
+}
+
+.instructions h3 {
+  color: #4285f4;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.instructions ol {
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.instructions li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.instructions p {
+  font-size: 16px;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.features {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature h3 {
+  color: #4285f4;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.feature p {
+  color: #5f6368;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  body {
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 30px;
+  }
+  
+  .input-section {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  header h1 {
+    font-size: 36px;
+  }
+  
+  header p {
+    font-size: 18px;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+  }
+  
+  header p {
+    font-size: 16px;
+  }
+  
+  #driveLink, #convertBtn {
+    font-size: 16px;
+  }
+}

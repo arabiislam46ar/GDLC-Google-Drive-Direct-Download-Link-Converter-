@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDLC - Google Drive Direct Link Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GDLC</h1>
+      <p>Google Drive Direct Link Converter</p>
+    </header>
+    
+    <div class="input-section">
+      <input type="text" id="driveLink" placeholder="Paste Google Drive link here..." autofocus>
+      <button id="convertBtn">Convert</button>
+    </div>
+    
+    <div class="loading-section" id="loadingSection" style="display: none;">
+      <div class="loading-spinner"></div>
+      <p>Converting link...</p>
+    </div>
+    
+    <div class="result-section" id="resultSection" style="display: none;">
+      <h3>Direct Download Link:</h3>
+      <div class="result-box">
+        <input type="text" id="directLink" readonly>
+        <button id="copyBtn">Copy</button>
+      </div>
+      <div class="action-buttons">
+        <a id="downloadLink" class="action-btn" target="_blank">Download File</a>
+        <button id="newConversionBtn" class="action-btn secondary">New Conversion</button>
+      </div>
+    </div>
+    
+    <div class="error-section" id="errorSection" style="display: none;">
+      <p id="errorMessage"></p>
+    </div>
+    
+    <div class="instructions">
+      <h3>How to use:</h3>
+      <ol>
+        <li>Copy the shareable link from Google Drive</li>
+        <li>Paste it in the input field above</li>
+        <li>Click Convert to generate a direct download link</li>
+        <li>Copy the link or download the file directly</li>
+      </ol>
+      <p><strong>Note:</strong> The file must be shared publicly for this to work.</p>
+    </div>
+  </div>
+  <div class="features">
+  <div class="feature">
+    <h3>Easy to Use</h3>
+    <p>Simply paste your Google Drive link and get a direct download link instantly.</p>
+  </div>
+  <div class="feature">
+    <h3>Fast Conversion</h3>
+    <p>Get your direct download links in seconds with our optimized conversion process.</p>
+  </div>
+  <div class="feature">
+    <h3>Completely Free</h3>
+    <p>GDLC is completely free to use with no limitations or hidden costs.</p>
+  </div>
+</div>
+  
+  <footer>
+    <p>GDLC v1.1.0 - Google Drive Direct Link Converter</p>
+  </footer>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>
